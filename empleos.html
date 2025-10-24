@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleos - ConectaEmpleo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="page-empleos" data-page-mode="personas">
+    <header class="header">
+        <div class="container">
+             <div class="header-left">
+                <a href="index.html" class="logo">ConectaEmpleo</a>
+                <div class="mode-switcher">
+                    <a href="index.html" class="mode-link active">Personas</a>
+                    <a href="empresas.html" class="mode-link">Empresas</a>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown open">
+                        <a href="empleos.html" id="empleos-nav-link" class="dropdown-toggle active">Empleos <span class="nav-arrow"></span></a>
+                        <div class="navbar-dropdown" id="empleos-dropdown">
+                            <a href="empleos.html#ver-ofertas" class="navbar-item">Ver Ofertas</a>
+                            <a href="empleos.html#buscar-empleo" class="navbar-item">Buscar Empleo</a>
+                        </div>
+                    </li>
+                    <li><a href="capacitacion.html">Capacitación</a></li>
+                    <li><a href="soporte.html">Soporte</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="cuenta.html" class="btn btn-secondary">Ingresar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="ver-ofertas-view">
+            <section class="section section-gray">
+                <div class="container page-title">
+                    <h1>Ofertas de Empleo Disponibles</h1>
+                    <p>Explora las últimas oportunidades de teletrabajo que hemos seleccionado para ti.</p>
+                </div>
+                <div class="container layout-container search-results-grid">
+                    <div class="listings-container">
+                        <div id="all-jobs-container">
+                            </div>
+                    </div>
+                    <div id="job-detail-container-all" class="job-detail-container">
+                        <div class="job-detail-placeholder">
+                            <h3>Selecciona una oferta</h3>
+                            <p>Los detalles del empleo aparecerán aquí.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="buscar-empleo-view" style="display: none;">
+            <section class="section section-gray">
+                 <div class="container page-title">
+                    <h1>Busca tu Empleo Ideal</h1>
+                    <p>Utiliza los filtros para encontrar la vacante que mejor se ajuste a tu perfil.</p>
+                </div>
+                <div class="container">
+                    <div class="unified-search-bar">
+                        <div class="search-segment input-segment">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                            <input type="text" id="search-job" placeholder="Puesto, empresa o palabra clave...">
+                        </div>
+                        <div class="search-divider"></div>
+                        <div class="search-segment filter-segment">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"></path></svg>
+                            <div class="custom-select-wrapper">
+                                <div class="custom-select-trigger"><span>Modalidad</span><div class="arrow"></div></div>
+                                <div class="custom-options">
+                                    <span class="custom-option selected" data-value="todos">Modalidad</span>
+                                    <span class="custom-option" data-value="Tiempo Completo">Tiempo Completo</span>
+                                    <span class="custom-option" data-value="Medio Tiempo">Medio Tiempo</span>
+                                    <span class="custom-option" data-value="Freelance">Freelance</span>
+                                </div>
+                                <select id="tipo-empleo" class="native-select">
+                                    <option value="todos">Todas</option>
+                                    <option value="Tiempo Completo">Tiempo Completo</option>
+                                    <option value="Medio Tiempo">Medio Tiempo</option>
+                                    <option value="Freelance">Freelance</option>
+                                </select>
+                            </div>
+                            <div class="custom-select-wrapper">
+                                <div class="custom-select-trigger"><span>Categoría</span><div class="arrow"></div></div>
+                                <div class="custom-options">
+                                    <span class="custom-option selected" data-value="todos">Categoría</span>
+                                    <span class="custom-option" data-value="Tecnología">Tecnología</span>
+                                    <span class="custom-option" data-value="Diseño">Diseño</span>
+                                    <span class="custom-option" data-value="Administrativo">Administrativo</span>
+                                    <span class="custom-option" data-value="Atención al Cliente">Atención al Cliente</span>
+                                </div>
+                                <select id="sector-empleo" class="native-select">
+                                    <option value="todos">Todos</option>
+                                    <option value="Tecnología">Tecnología</option>
+                                    <option value="Diseño">Diseño</option>
+                                    <option value="Administrativo">Administrativo</option>
+                                    <option value="Atención al Cliente">Atención al Cliente</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="container layout-container search-results-grid">
+                    <div class="listings-container">
+                        <div id="job-listings-search-results">
+                             </div>
+                    </div>
+                    <div id="job-detail-container-search" class="job-detail-container">
+                        <div class="job-detail-placeholder">
+                            <h3>Selecciona una oferta</h3>
+                            <p>Los detalles del empleo aparecerán aquí.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ConectaEmpleo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

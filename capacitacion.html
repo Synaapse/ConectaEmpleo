@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitación - ConectaEmpleo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page-mode="personas">
+    <header class="header">
+        <div class="container">
+             <div class="header-left">
+                <a href="index.html" class="logo">ConectaEmpleo</a>
+                <div class="mode-switcher">
+                    <a href="index.html" class="mode-link active">Personas</a>
+                    <a href="empresas.html" class="mode-link">Empresas</a>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="empleos.html" id="empleos-nav-link" class="dropdown-toggle">Empleos <span class="nav-arrow"></span></a>
+                        <div class="navbar-dropdown" id="empleos-dropdown">
+                            <a href="empleos.html#ver-ofertas" class="navbar-item">Ver Ofertas</a>
+                            <a href="empleos.html#buscar-empleo" class="navbar-item">Buscar Empleo</a>
+                        </div>
+                    </li>
+                    <li><a href="capacitacion.html" class="active">Capacitación</a></li>
+                    <li><a href="soporte.html">Soporte</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="cuenta.html" class="btn btn-secondary">Ingresar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="buscar-cursos" class="section section-gray">
+            <div class="container page-title">
+                <h1>Cursos y Formación</h1>
+                <p>Adquiere nuevas habilidades para destacar en el mercado del teletrabajo.</p>
+            </div>
+
+            <div class="container">
+                <div class="unified-search-bar">
+                    <div class="search-segment input-segment">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zM12 4h4v2h-4V4z"></path></svg>
+                        <input type="text" id="search-course" placeholder="Nombre del curso...">
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-segment filter-segment">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"></path></svg>
+                        
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select-trigger"><span>Categoría</span><div class="arrow"></div></div>
+                            <div class="custom-options">
+                                <span class="custom-option selected" data-value="todos">Categoría</span>
+                                <span class="custom-option" data-value="desarrollo-web">Desarrollo Web</span>
+                                <span class="custom-option" data-value="marketing-digital">Marketing Digital</span>
+                                <span class="custom-option" data-value="habilidades-blandas">Habilidades Blandas</span>
+                            </div>
+                            <select id="categoria-curso" class="native-select">
+                                <option value="todos">Todas</option>
+                                <option value="desarrollo-web">Desarrollo Web</option>
+                                <option value="marketing-digital">Marketing Digital</option>
+                                <option value="habilidades-blandas">Habilidades Blandas</option>
+                            </select>
+                        </div>
+                        
+                        <div class="custom-select-wrapper">
+                             <div class="custom-select-trigger"><span>Nivel</span><div class="arrow"></div></div>
+                             <div class="custom-options">
+                                <span class="custom-option selected" data-value="todos">Nivel</span>
+                                <span class="custom-option" data-value="introductorio">Introductorio</span>
+                                <span class="custom-option" data-value="intermedio">Intermedio</span>
+                                <span class="custom-option" data-value="avanzado">Avanzado</span>
+                            </div>
+                            <select id="nivel-curso" class="native-select">
+                                <option value="todos">Todos</option>
+                                <option value="introductorio">Introductorio</option>
+                                <option value="intermedio">Intermedio</option>
+                                <option value="avanzado">Avanzado</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <button class="search-submit-btn" aria-label="Buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="container layout-container search-results-grid">
+                <div class="listings-container">
+                    <div id="course-listings">
+                        </div>
+                </div>
+
+                <div id="course-detail-container" class="course-detail-container">
+                    <div class="course-detail-placeholder">
+                        <h3>Selecciona un curso</h3>
+                        <p>Los detalles completos del curso aparecerán aquí.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ConectaEmpleo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

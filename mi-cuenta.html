@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Panel - ConectaEmpleo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="mi-cuenta" data-page-mode="personas">
+    <header class="header">
+        <div class="container">
+            <div class="header-left">
+                <a href="index.html" class="logo">ConectaEmpleo</a>
+                <div class="mode-switcher">
+                    <a href="index.html" class="mode-link active">Personas</a>
+                    <a href="empresas.html" class="mode-link">Empresas</a>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="empleos.html" id="empleos-nav-link" class="dropdown-toggle">Empleos <span class="nav-arrow"></span></a>
+                        <div class="navbar-dropdown" id="empleos-dropdown">
+                            <a href="empleos.html#ver-ofertas" class="navbar-item">Ver Ofertas</a>
+                            <a href="empleos.html#buscar-empleo" class="navbar-item">Buscar Empleo</a>
+                        </div>
+                    </li>
+                    <li><a href="capacitacion.html">Capacitación</a></li>
+                    <li><a href="soporte.html">Soporte</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="section section-gray">
+            <div class="container container-small">
+                <h1>Panel De Usuario</h1>
+
+                <article id="postulaciones" class="card" style="margin-bottom: 30px;">
+                    <h3>Mis Postulaciones</h3>
+                    <div id="applications-container">
+                        </div>
+                </article>
+
+                <article id="favoritos" class="card" style="margin-bottom: 30px;">
+                    <h3>Mis Ofertas Favoritas</h3>
+                    <div id="favorites-container">
+                        </div>
+                </article>
+
+                <article id="mis-cursos" class="card" style="margin-bottom: 30px;">
+                    <h3>Mis Cursos Inscritos</h3>
+                    <div id="courses-container">
+                        </div>
+                </article>
+                
+                <article id="hoja-de-vida" class="card" style="margin-bottom: 30px;">
+                    <h3>Mi Hoja de Vida</h3>
+                    
+                    <form id="upload-cv-form">
+                        <p>Sube tu hoja de vida en formato PDF para agilizar tus postulaciones.</p>
+                        <div class="form-group">
+                            <label for="cv-file">Seleccionar archivo (PDF, max 2MB)</label>
+                            <input type="file" id="cv-file" name="cv" accept=".pdf">
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Subir Archivo</button>
+                    </form>
+
+                    <div id="uploaded-cv-view" style="display: none;">
+                        <p class="success-message" style="text-align: left; margin-top: 0;">
+                            ✔ Tu hoja de vida ya está guardada y lista para ser enviada.
+                        </p>
+                        <p>Si deseas cambiarla, primero elimina el archivo actual.</p>
+                        <button id="delete-cv-btn" class="btn btn-danger">Eliminar Archivo</button>
+                    </div>
+                </article>
+
+                <article id="cambiar-password" class="card">
+                    <h3>Cambiar mi Contraseña</h3>
+                    <form id="change-password-form" class="account-form">
+                        <div class="form-group">
+                            <label for="old-password">Contraseña Actual</label>
+                            <input type="password" id="old-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">Nueva Contraseña</label>
+                            <input type="password" id="new-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Actualizar Contraseña</button>
+                    </form>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ConectaEmpleo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

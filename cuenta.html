@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta - ConectaEmpleo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page-mode="personas">
+    <header class="header">
+         <div class="container">
+             <div class="header-left">
+                <a href="index.html" class="logo">ConectaEmpleo</a>
+                <div class="mode-switcher">
+                    <a href="index.html" class="mode-link active">Personas</a>
+                    <a href="empresas.html" class="mode-link">Empresas</a>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="empleos.html" id="empleos-nav-link" class="dropdown-toggle">Empleos <span class="nav-arrow"></span></a>
+                        <div class="navbar-dropdown" id="empleos-dropdown">
+                            <a href="empleos.html#ver-ofertas" class="navbar-item">Ver Ofertas</a>
+                            <a href="empleos.html#buscar-empleo" class="navbar-item">Buscar Empleo</a>
+                        </div>
+                    </li>
+                    <li><a href="capacitacion.html">Capacitación</a></li>
+                    <li><a href="soporte.html">Soporte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="cuenta" class="section section-gray">
+            <div class="container container-small">
+                 <div class="account-container">
+                    <div class="tabs">
+                        <button class="tab-link active" data-tab="login">Iniciar Sesión</button>
+                        <button class="tab-link" data-tab="register">Crear Cuenta</button>
+                    </div>
+                    
+                    <div id="login" class="tab-content active">
+                        <h3>Accede a tu cuenta</h3>
+                        <form class="account-form" id="user-login-form">
+                            <div class="form-group">
+                                <label for="login-email">Correo Electrónico</label>
+                                <input type="email" id="login-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Contraseña</label>
+                                <input type="password" id="login-password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Ingresar</button>
+                        </form>
+                    </div>
+
+                    <div id="register" class="tab-content">
+                        <h3>Únete a ConectaEmpleo</h3>
+                        <form class="account-form" id="user-register-form">
+                             <div class="form-group">
+                                <label for="reg-name">Nombre Completo</label>
+                                <input type="text" id="reg-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-email">Correo Electrónico</label>
+                                <input type="email" id="reg-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-password">Crea una Contraseña</label>
+                                <input type="password" id="reg-password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Crear mi Cuenta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ConectaEmpleo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaEmpleo - Teletrabajo para Regiones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page-mode="personas">
+    <header class="header">
+        <div class="container">
+            <div class="header-left">
+                <a href="index.html" class="logo">ConectaEmpleo</a>
+                <div class="mode-switcher">
+                    <a href="index.html" class="mode-link active">Personas</a>
+                    <a href="empresas.html" class="mode-link">Empresas</a>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="empleos.html" id="empleos-nav-link" class="dropdown-toggle">Empleos <span class="nav-arrow"></span></a>
+                        <div class="navbar-dropdown" id="empleos-dropdown">
+                            <a href="empleos.html#ver-ofertas" class="navbar-item">Ver Ofertas</a>
+                            <a href="empleos.html#buscar-empleo" class="navbar-item">Buscar Empleo</a>
+                        </div>
+                    </li>
+                    <li><a href="capacitacion.html">Capacitación</a></li>
+                    <li><a href="soporte.html">Soporte</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="cuenta.html" class="btn btn-secondary">Ingresar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section hero">
+            <div class="hero-background"></div>
+            <div class="container">
+                <h1>Tu portal de teletrabajo, donde sea que estés</h1>
+                <p>Oportunidades laborales y formativas, optimizadas para conexiones de bajo ancho de banda.</p>
+                <a href="empleos.html" class="btn btn-primary">Explorar Ofertas de Empleo</a>
+            </div>
+        </section>
+
+        <section class="section home-cta">
+             <div class="container text-center">
+                <h2>¿Eres una Empresa?</h2>
+                <p>Publica tus vacantes y encuentra el mejor talento para tu equipo, sin importar dónde se encuentre.</p>
+                <a href="empresas.html" class="btn btn-secondary">Publicar una Oferta</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="chat-popup-widget">
+        <div id="ai-chat-container" class="chat-container">
+            <div class="chat-header">
+                <h3>Asistente IA ConectaEmpleo</h3>
+                <p>Impulsado por IA avanzada</p>
+            </div>
+            <div id="chat-window" class="chat-window">
+            </div>
+            <form id="chat-form" class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Escribe tu pregunta aquí..." autocomplete="off">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+        <button id="chat-toggle-btn" class="chat-toggle-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        </button>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ConectaEmpleo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
